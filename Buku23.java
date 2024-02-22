@@ -5,6 +5,20 @@ public class Buku23 {
     int stok;
     int harga;
 
+    
+    public Buku23() {
+        // Isi konstruktor default jika diperlukan
+    }
+
+    // Konstruktor berparameter
+    public Buku23(String jud, String pg, int hal, int st, int har) {
+        judul = jud;
+        pengarang = pg;
+        halaman = hal;
+        stok = st;
+        harga = har;
+    }
+
     void tampilInformasi() {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
@@ -14,9 +28,9 @@ public class Buku23 {
     }
 
     void terjual(int jml) {
-        if (stok>0){
-        stok = -jml;
-        }else {
+        if (stok > 0) {
+            stok = stok - jml;
+        } else {
             System.out.println("Stok habis. Tidak dapat melakukan penjualan.");
         }
     }
@@ -28,5 +42,5 @@ public class Buku23 {
     void gantiHarga(int hrg) {
         harga = hrg;
     }
-
 }
+
