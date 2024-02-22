@@ -17,7 +17,7 @@ public class BukuMain23 {
         bk2.tampilInformasi();
 
     
-    Buku23 bukuPurnama = new Buku23("Malah yang sunyi", "Purnama", 150, 20, 100000);
+    Buku23 bukuPurnama = new Buku23("Malam yang sunyi", "Purnama", 150, 20, 100000);
     bukuPurnama.terjual(10);
     bukuPurnama.tampilInformasi();
 

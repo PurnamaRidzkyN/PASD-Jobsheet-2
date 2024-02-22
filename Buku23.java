@@ -5,12 +5,10 @@ public class Buku23 {
     int stok;
     int harga;
 
-    
     public Buku23() {
         // Isi konstruktor default jika diperlukan
     }
 
-    // Konstruktor berparameter
     public Buku23(String jud, String pg, int hal, int st, int har) {
         judul = jud;
         pengarang = pg;
@@ -42,5 +40,24 @@ public class Buku23 {
     void gantiHarga(int hrg) {
         harga = hrg;
     }
-}
 
+    int hitungHargaTotal() {
+        return harga * stok;
+    }
+
+    int hitungDiskon() {
+        int hargaTotal = hitungHargaTotal();
+        if (hargaTotal > 150000) {
+            return (int) (hargaTotal *= 0.12);
+        } else if (hargaTotal > 75000 && hargaTotal > 150000) {
+            return (int) (hargaTotal * 0.05);
+        } else {
+            return (int) 0;
+        }
+    }
+    int hitungBayar(){
+        int bayar  = hitungHargaTotal()-hitungDiskon();
+        return (int) bayar;
+        
+    }
+}
